@@ -1,0 +1,19 @@
+Pod::Spec.new do |s|
+  s.name = "${project_name}"
+  s.version = "${project_version}"
+  s.platform = :ios, "9.0"
+  s.license = 'PRIVATE'
+  s.author = 'LinkedIn'
+  s.homepage = 'http://www.linkedin.com'
+  s.summary = 'View Patterns for Project Neo'
+  s.requires_arc = true
+  s.source = ${podspec_framework_source}
+
+  s.vendored_framework = '${project_name}.framework'
+  s.preserve_paths = "*.dSYM"
+
+  s.frameworks = 'Foundation', 'UIKit'
+  
+  s.ios.dependency 'Executors'
+  s.ios.dependency 'NEOViewModels'
+end

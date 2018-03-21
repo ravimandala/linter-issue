@@ -1,0 +1,14 @@
+apply plugin: 'li-ios-library'
+
+dependencies {}
+
+xcodebuild {
+  xcodeproj = 'Neo.xcodeproj'
+  configuration = 'Release'
+  destinations {
+    OS = ['latest']
+    name = ['iPhone 6']
+  }
+
+  scheme = 'NEOViewInfra'
+}
